@@ -31,6 +31,125 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+    /* ========== FUENTE PERSONALIZADA PARA STCM ========== */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+    
+    .stcm-font {
+        font-family: 'Arial Paneuropean Rounded Bold', 'Arial Rounded MT Bold', 'Montserrat', sans-serif;
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
+
+    /* ========== COLORES PRINCIPALES ========== */
+    :root {
+        --azul-stcm: #057fca;
+        --naranja-stcm: #ff8002;
+        --gris-stcm: #6c757d;
+    }
+
+    /* ========== COLOR AZUL (FONDOS) ========== */
+    .bg-primary {
+        background-color: var(--azul-stcm) !important;
+    }
+
+    /* ========== FORZAR COLOR NARANJA EN MENÚ ========== */
+    /* Esto anula el efecto de navbar-dark */
+    .navbar-dark .navbar-nav .nav-link {
+        color: var(--naranja-stcm) !important;
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover,
+    .navbar-dark .navbar-nav .nav-link.active {
+        color: var(--naranja-stcm) !important;
+        opacity: 0.8;
+    }
+
+    /* ========== COLOR NARANJA (TEXTOS Y DESTACADOS) ========== */
+    .text-primary,
+    .facts .text-primary,
+    .project-title h5 {
+        color: var(--naranja-stcm) !important;
+    }
+
+    /* Botones principales en naranja */
+    .btn-primary {
+        background-color: var(--naranja-stcm) !important;
+        border-color: var(--naranja-stcm) !important;
+    }
+
+    .btn-primary:hover {
+        background-color: #e67300 !important;
+        border-color: #e67300 !important;
+    }
+
+    /* Iconos y cuadros con fondo primario */
+    .btn-square.bg-primary,
+    .flex-shrink-0.bg-primary {
+        background-color: var(--naranja-stcm) !important;
+    }
+
+    /* Botón de reproducción de video */
+    .btn-play:hover {
+        background-color: var(--naranja-stcm) !important;
+    }
+
+    /* Redes sociales en equipo */
+    .team-social .btn-dark:hover {
+        background-color: var(--naranja-stcm) !important;
+    }
+
+    /* Botón volver arriba */
+    .back-to-top:hover {
+        background-color: var(--naranja-stcm) !important;
+    }
+
+    /* Enlaces en copyright */
+    .copyright a {
+        color: var(--naranja-stcm) !important;
+    }
+    
+    .copyright a:hover {
+        color: var(--azul-stcm) !important;
+    }
+
+    /* Bordes primarios */
+    .border-primary {
+        border-color: var(--naranja-stcm) !important;
+    }
+
+    /* Testimonios */
+    .testimonial-item .btn-square.bg-primary {
+        background-color: var(--naranja-stcm) !important;
+    }
+
+    /* Botón "Read More" en servicios */
+    .service-item .btn-light {
+        color: var(--azul-stcm) !important;
+    }
+    
+    .service-item .btn-light:hover {
+        background-color: var(--naranja-stcm) !important;
+        color: white !important;
+        border-color: var(--naranja-stcm) !important;
+    }
+
+    /* Forzar texto STCM en gris */
+    .stcm-font {
+        color: var(--gris-stcm) !important;
+    }
+
+    /* Ajustes de contraste */
+    .text-dark {
+        color: #1e2a36 !important;
+    }
+
+    .bg-dark {
+        background-color: #1a1f24 !important;
+    }
+</style>
+
 </head>
 
 <body>
@@ -43,26 +162,26 @@
 
 
     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-0">
-        <div class="row g-0 d-none d-lg-flex">
-            <div class="col-lg-6 ps-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center text-white">
-                    <span>Follow Us:</span>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-instagram"></i></a>
-                </div>
+<div class="container-fluid bg-dark px-0">
+    <div class="row g-0 d-none d-lg-flex">
+        <div class="col-lg-6 ps-5 text-start">
+            <div class="h-100 d-inline-flex align-items-center text-white">
+                <span>Síguenos:</span>
+                <a class="btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-link text-light" href=""><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-link text-light" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-link text-light" href=""><i class="fab fa-instagram"></i></a>
             </div>
-            <div class="col-lg-6 text-end">
-                <div class="h-100 topbar-right d-inline-flex align-items-center text-white py-2 px-5">
-                    <span class="fs-5 fw-bold me-2"><i class="fa fa-phone-alt me-2"></i>Call Us:</span>
-                    <span class="fs-5 fw-bold">+012 345 6789</span>
-                </div>
+        </div>
+        <div class="col-lg-6 text-end">
+            <div class="h-100 topbar-right d-inline-flex align-items-center text-white py-2 px-5">
+                <span class="fs-5 fw-bold me-2"><i class="fa fa-phone-alt me-2"></i>Llámanos:</span>
+                <span class="fs-5 fw-bold">+012 345 6789</span>
             </div>
         </div>
     </div>
-    <!-- Topbar End -->
+</div>
+<!-- Topbar End -->
 
 
     <!-- Navbar Start -->
@@ -92,8 +211,10 @@
             </div>
             <a href="" class="btn btn-primary px-3 d-none d-lg-block">Get A Quote</a>
         </div>
-    </nav>
-    <!-- Navbar End -->
+        <a href="" class="btn btn-primary px-3 d-none d-lg-block" style="font-weight: bold;">Solicitar cotización</a>
+    </div>
+</nav>
+<!-- Navbar End -->
 
 
     <!-- Carousel Start -->
@@ -188,7 +309,7 @@
                                 </div>
                                 <div class="ms-3">
                                     <p class="mb-2">Email us</p>
-                                    <h5 class="mb-0">jerolgay_le_gusta_su_lechita@example.com</h5>
+                                    <h5 class="mb-0">STCM@example.com</h5>
                                 </div>
                             </div>
                         </div>
