@@ -90,10 +90,11 @@ h6,
     font-weight: normal;
 }
 
-
+/*                          */
 .topbar-right {
     position: relative;
-    background: var(--primary);
+    background: white;
+    border-left: 1px solid #ddd;
 }
 
 .topbar-right::before {
@@ -104,9 +105,22 @@ h6,
     top: 0;
     left: -15px;
     transform: skewX(-30deg);
-    background-color: var(--primary);
+    background-color: white;
+    border-left: 1px solid #ddd;
 }
 
+.btn.btn-link.text-dark {
+    color: black !important;
+}
+
+.btn.btn-link.text-dark:hover {
+    color: #555 !important;
+}
+
+.container-fluid.bg-white {
+    border-bottom: 1px solid #ddd;
+}
+/*                          */
 
 /*** Navbar ***/
 .navbar.sticky-top {
