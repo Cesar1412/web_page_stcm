@@ -31,6 +31,171 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+    /* ========== FUENTE PERSONALIZADA PARA STCM ========== */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+    
+    .stcm-font {
+        font-family: 'Arial Paneuropean Rounded Bold', 'Arial Rounded MT Bold', 'Montserrat', sans-serif;
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
+
+    /* ========== COLORES PRINCIPALES ========== */
+    :root {
+        --azul-stcm: #057fca;
+        --naranja-stcm: #ff8002;
+        --gris-stcm: #6c757d;
+    }
+
+    /* ========== COLOR AZUL (FONDOS) ========== */
+    .bg-primary {
+        background-color: var(--azul-stcm) !important;
+    }
+
+    /* ========== FORZAR COLOR NARANJA EN MENÚ ========== */
+    /* Esto anula el efecto de navbar-dark */
+    .navbar-dark .navbar-nav .nav-link {
+        color: var(--naranja-stcm) !important;
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover,
+    .navbar-dark .navbar-nav .nav-link.active {
+        color: var(--naranja-stcm) !important;
+        opacity: 0.8;
+    }
+
+    /* ========== COLOR NARANJA (TEXTOS Y DESTACADOS) ========== */
+    .text-primary,
+    .facts .text-primary,
+    .project-title h5 {
+        color: var(--naranja-stcm) !important;
+    }
+
+    /* Botones principales en naranja */
+    .btn-primary {
+        background-color: var(--naranja-stcm) !important;
+        border-color: var(--naranja-stcm) !important;
+    }
+
+    .btn-primary:hover {
+        background-color: #e67300 !important;
+        border-color: #e67300 !important;
+    }
+
+    /* Iconos y cuadros con fondo primario */
+    .btn-square.bg-primary,
+    .flex-shrink-0.bg-primary {
+        background-color: var(--naranja-stcm) !important;
+    }
+
+    /* Botón de reproducción de video */
+    .btn-play:hover {
+        background-color: var(--naranja-stcm) !important;
+    }
+
+    /* Redes sociales en equipo */
+    .team-social .btn-dark:hover {
+        background-color: var(--naranja-stcm) !important;
+    }
+
+    /* Botón volver arriba */
+    .back-to-top:hover {
+        background-color: var(--naranja-stcm) !important;
+    }
+
+    /* Enlaces en copyright */
+    .copyright a {
+        color: var(--naranja-stcm) !important;
+    }
+    
+    .copyright a:hover {
+        color: var(--azul-stcm) !important;
+    }
+
+    /* Bordes primarios */
+    .border-primary {
+        border-color: var(--naranja-stcm) !important;
+    }
+
+    /* Testimonios */
+    .testimonial-item .btn-square.bg-primary {
+        background-color: var(--naranja-stcm) !important;
+    }
+
+    /* Botón "Read More" en servicios */
+    .service-item .btn-light {
+        color: var(--azul-stcm) !important;
+    }
+    
+    .service-item .btn-light:hover {
+        background-color: var(--naranja-stcm) !important;
+        color: white !important;
+        border-color: var(--naranja-stcm) !important;
+    }
+
+    /* Forzar texto STCM en gris */
+    .stcm-font {
+        color: var(--gris-stcm) !important;
+    }
+
+    /* Ajustes de contraste */
+    .text-dark {
+        color: #1e2a36 !important;
+    }
+
+    .bg-dark {
+        background-color: #1a1f24 !important;
+    }
+    /* Soluciones - efecto hover */
+    .benefit-item {
+        transition: transform .18s ease, background-color .18s ease, box-shadow .18s ease;
+        border-radius: .5rem;
+    }
+    .benefit-item:hover {
+        background-color: rgba(255, 128, 2, 0.08);
+        transform: translateY(-6px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+    /* Badges bajo el contador - tamaño y color naranja para destacar */
+    .stat-badges .badge {
+        background-color: var(--naranja-stcm) !important;
+        color: #fff !important;
+        padding: .8rem 1.2rem;
+        font-size: 1.6rem;
+        font-weight: 800;
+        border-radius: 1rem;
+        display: inline-flex;
+        align-items: center;
+        gap: .5rem;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+    .team-item-small {
+        background-color: #fff;
+        border: 1px solid rgba(0,0,0,0.08);
+        border-radius: 1rem;
+        padding: 1rem;
+        transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .team-item-small:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 14px 24px rgba(0,0,0,0.08);
+    }
+    .team-item-small img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+    .team-item-small h6 {
+        margin-bottom: .25rem;
+    }
+    .team-item-small small {
+        display: block;
+        margin-bottom: .5rem;
+    }
+</style>
+
 </head>
 
 <body>
@@ -43,7 +208,7 @@
 
 
     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-0">
+    <!--<div class="container-fluid bg-dark px-0">
         <div class="row g-0 d-none d-lg-flex">
             <div class="col-lg-6 ps-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center text-white">
@@ -61,52 +226,45 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- Topbar End -->
 
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
-        <a href="index.html" class="navbar-brand ps-5 me-0">
-            <h1 class="text-white m-0">Industro</h1>
-        </a>
-        <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link active">About</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu bg-light m-0">
-                        <a href="project.html" class="dropdown-item">Projects</a>
-                        <a href="feature.html" class="dropdown-item">Features</a>
-                        <a href="team.html" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
-                </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </div>
-            <a href="" class="btn btn-primary px-3 d-none d-lg-block">Get A Quote</a>
+<nav class="navbar navbar-expand-lg bg-primary sticky-top py-0 pe-5">
+    <a href="index.html" class="navbar-brand ps-5 me-0 d-flex align-items-center" 
+       style="background-color: white; 
+              padding: 10px 60px 10px 20px;
+              min-height: 80px;">
+        <img src="reallogo.png" alt="STCM Logo" style="height: 50px; width: auto; margin-right: 12px;">
+        <h1 class="m-0 stcm-font" style="font-family: 'Arial Paneuropean Rounded Bold', 'Arial Rounded MT Bold', 'Montserrat', sans-serif; font-weight: 800; letter-spacing: 1px;">STCM</h1>
+    </a>
+    <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="index.html" class="nav-item nav-link active">Hogar</a>
+            <a href="about.html" class="nav-item nav-link">Sobre nosotros</a>
+            <a href="service.html" class="nav-item nav-link">Servicios</a>
         </div>
-    </nav>
-    <!-- Navbar End -->
+        <a href="contact.html" class="btn btn-primary px-3 d-none d-lg-block" style="font-weight: bold;">Solicitar cotización</a>
+    </div>
+</nav>
+<!-- Navbar End -->
 
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
-            <h1 class="display-3 text-white animated slideInRight">About Us</h1>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb animated slideInRight mb-0">
+            <h1 class="display-3 text-white animated slideInRight">Sobre Nosotros</h1>
+            <!--<nav aria-label="breadcrumb">
+                    <ol class="breadcrumb animated slideInRight mb-0">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
                     <li class="breadcrumb-item"><a href="#">Pages</a></li>
                     <li class="breadcrumb-item active" aria-current="page">About Us</li>
                 </ol>
-            </nav>
+            </nav>-->
         </div>
     </div>
     <!-- Page Header End -->
@@ -119,31 +277,36 @@
                 <div class="col-lg-6">
                     <div class="row gx-3 h-100">
                         <div class="col-6 align-self-start wow fadeInUp" data-wow-delay="0.1s">
-                            <img class="img-fluid" src="img/about-1.jpg">
+                            <img class="img-fluid" src="prole1.jpeg">
                         </div>
                         <div class="col-6 align-self-end wow fadeInDown" data-wow-delay="0.1s">
-                            <img class="img-fluid" src="img/about-2.jpg">
+                            <img class="img-fluid" src="prole2.jpeg">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <p class="fw-medium text-uppercase text-primary mb-2">About Us</p>
-                    <h1 class="display-5 mb-4">We Are Leader In Industrial Market</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                        eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
+                    <p class="fw-medium text-uppercase text-primary mb-2">Sobre nosotros</p>
+                    <h1 class="display-5 mb-4">Medimos con exactitud, certificamos con confianza.</h1>
+                    <p class="mb-4"> Somos una empresa especializada en servicios de metrología, comprometida con garantizar la precisión y confiabilidad de los equipos de medición utilizados en los sectores industrial, comercial y de laboratorio.
                     </p>
                     <div class="d-flex align-items-center mb-4">
-                        <div class="flex-shrink-0 bg-primary p-4">
-                            <h1 class="display-2">5000</h1>
-                            <h5 class="text-white">Years of</h5>
-                            <h5 class="text-white">Experience</h5>
+                        <div class="flex-shrink-0 bg-primary p-4 text-center">
+                            <h1 class="display-2 mb-0">6</h1>
+                            <h5 class="text-white">Años de</h5>
+                            <h5 class="text-white">Experiencia</h5>
                         </div>
                         <div class="ms-4">
-                            <p><i class="fa fa-check text-primary me-2"></i>Power & Energy</p>
-                            <p><i class="fa fa-check text-primary me-2"></i>Civil Engineering</p>
-                            <p><i class="fa fa-check text-primary me-2"></i>Chemical Engineering</p>
-                            <p><i class="fa fa-check text-primary me-2"></i>Mechanical Engineering</p>
-                            <p class="mb-0"><i class="fa fa-check text-primary me-2"></i>Oil & Gas Engineering</p>
+                            <p><i class="fa fa-check text-primary me-2"></i>Calibración de temperatura y humedad</p>
+                            <p><i class="fa fa-check text-primary me-2"></i>Calibración de presión y vacío</p>
+                            <p><i class="fa fa-check text-primary me-2"></i>Calibración de masa y balanzas</p>
+                            <p><i class="fa fa-check text-primary me-2"></i>Calibración de equipos eléctricos</p>
+                            <p class="mb-0"><i class="fa fa-check text-primary me-2"></i>Calificaciones industriales</p>
+
+                            <div class="stat-badges mt-3 d-flex flex-wrap gap-2">
+                                <span class="badge bg-primary text-white rounded-pill">+500 servicios</span>
+                                <span class="badge bg-primary text-white rounded-pill"><i class="fa fa-star me-1"></i>5 estrellas</span>
+                                <span class="badge bg-primary text-white rounded-pill"><i class="fa fa-certificate me-1"></i>4 certificaciones</span>
+                            </div>
                         </div>
                     </div>
                     <div class="row pt-2">
@@ -153,18 +316,18 @@
                                     <i class="fa fa-envelope-open text-white"></i>
                                 </div>
                                 <div class="ms-3">
-                                    <p class="mb-2">Email us</p>
-                                    <h5 class="mb-0">info@example.com</h5>
+                                    <p class="mb-2">Escribenos</p>
+                                    <h5 class="mb-0">sctmcalibraciones@gmail.com</h5>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-10">
                             <div class="d-flex align-items-center">
                                 <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
                                     <i class="fa fa-phone-alt text-white"></i>
                                 </div>
                                 <div class="ms-3">
-                                    <p class="mb-2">Call us</p>
+                                    <p class="mb-2">Llamanos</p>
                                     <h5 class="mb-0">+012 345 6789</h5>
                                 </div>
                             </div>
@@ -177,8 +340,42 @@
     <!-- About End -->
 
 
+    <!-- Soluciones y Beneficios Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <p class="fw-medium text-uppercase text-primary mb-2">Soluciones</p>
+                <h1 class="display-5 mb-4">Soluciones y Beneficios para tu Empresa</h1>
+                <p class="mb-4">Proveemos servicios de metrología y consultoría orientados a ofrecer resultados fiables, facilitar procesos de acreditación y ayudar a cumplir exigencias regulatorias.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="p-4 bg-light h-100 benefit-item">
+                        <h5 class="mb-3">Precisión garantizada</h5>
+                        <p class="mb-4">Calibraciones realizadas con trazabilidad y controles que aseguran mediciones reproducibles y consistentes.</p>
+                        <h5 class="mb-3">Cumplimiento normativo</h5>
+                        <p class="mb-4">Emitimos certificados válidos para auditorías y para demostrar conformidad con normas y requisitos de calidad.</p>
+                        <h5 class="mb-3">Reducción de riesgos</h5>
+                        <p>La calibración oportuna minimiza fallos operativos y ayuda a prevenir errores costosos en producción y control de calidad.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="p-4 bg-light h-100 benefit-item">
+                        <h5 class="mb-3">Atención especializada</h5>
+                        <p class="mb-4">Asesoría técnica personalizada, respuesta ágil y soporte en cada etapa del servicio.</p>
+                        <h5 class="mb-3">Confianza institucional</h5>
+                        <p class="mb-4">Organismos y clientes que exigen calidad encuentran en nuestros procesos una garantía de integridad técnica.</p>
+                        <h5 class="mb-3">Flexibilidad operativa</h5>
+                        <p>Trabajamos tanto in situ como en laboratorio para adaptarnos a tus requerimientos sin interrumpir las operaciones críticas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Soluciones y Beneficios End -->
+
     <!-- Facts Start -->
-    <div class="container-fluid facts my-5 p-5">
+    <!--<div class="container-fluid facts my-5 p-5">
         <div class="row g-5">
             <div class="col-md-6 col-xl-3 wow fadeIn" data-wow-delay="0.1s">
                 <div class="text-center border p-5">
@@ -209,7 +406,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- Facts End -->
 
 
@@ -217,8 +414,8 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="fw-medium text-uppercase text-primary mb-2">Our Team</p>
-                <h1 class="display-5 mb-5">Dedicated Team Members</h1>
+                <p class="fw-medium text-uppercase text-primary mb-2">Nuestro equipo</p>
+                <h1 class="display-5 mb-5">Conoce a nuestros miembros</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -291,6 +488,51 @@
                     </div>
                 </div>
             </div>
+            <!-- Additional staff row (6 smaller cells) -->
+            <div class="row g-3 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item team-item-small text-center">
+                        <img class="rounded-circle mb-3" src="img/team-4.jpg" alt="Ana Ruiz">
+                        <h6 class="mb-0">Ana Ruiz</h6>
+                        <small class="text-primary">Técnico</small>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.15s">
+                    <div class="team-item team-item-small text-center">
+                        <img class="rounded-circle mb-3" src="img/team-5.jpg" alt="Luis Gómez">
+                        <h6 class="mb-0">Luis Gómez</h6>
+                        <small class="text-primary">Ingeniero</small>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-item team-item-small text-center">
+                        <img class="rounded-circle mb-3" src="img/team-6.jpg" alt="María López">
+                        <h6 class="mb-0">María López</h6>
+                        <small class="text-primary">Analista</small>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.25s">
+                    <div class="team-item team-item-small text-center">
+                        <img class="rounded-circle mb-3" src="img/team-7.jpg" alt="Carlos Peña">
+                        <h6 class="mb-0">Carlos Peña</h6>
+                        <small class="text-primary">Técnico</small>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item team-item-small text-center">
+                        <img class="rounded-circle mb-3" src="img/team-8.jpg" alt="Sofía Ramos">
+                        <h6 class="mb-0">Sofía Ramos</h6>
+                        <small class="text-primary">Soporte</small>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.35s">
+                    <div class="team-item team-item-small text-center">
+                        <img class="rounded-circle mb-3" src="img/team-9.jpg" alt="Jorge Díaz">
+                        <h6 class="mb-0">Jorge Díaz</h6>
+                        <small class="text-primary">Logística</small>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Team End -->
@@ -322,11 +564,11 @@
     <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Our Office</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white mb-4">Nuestra Oficina</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jr. San Juan Bautista Nro. 268, Lima</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 6789</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>sctmcalibraciones@gmail.com</p>
                     <div class="d-flex pt-3">
                         <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
                                 class="fab fa-twitter"></i></a>
@@ -338,24 +580,24 @@
                                 class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white mb-4">Links</h5>
+                    <a class="btn btn-link" href="">Sobre nosotros</a>
+                    <a class="btn btn-link" href="">Servicios</a>
+                    <a class="btn btn-link" href="contact.html">Solicitar cotización</a>
+                    <!--<a class="btn btn-link" href="">Terms & Condition</a>-->
+                    <!--<a class="btn btn-link" href="">Support</a>-->
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Business Hours</h5>
-                    <p class="mb-1">Monday - Friday</p>
-                    <h6 class="text-light">09:00 am - 07:00 pm</h6>
-                    <p class="mb-1">Saturday</p>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white mb-4">Horarios de atención</h5>
+                    <p class="mb-1">Lunes - Viernes</p>
+                    <h6 class="text-light">08:00 am - 06:00 pm</h6>
+                    <p class="mb-1">Sábado</p>
                     <h6 class="text-light">09:00 am - 12:00 pm</h6>
-                    <p class="mb-1">Sunday</p>
-                    <h6 class="text-light">Closed</h6>
+                    <p class="mb-1">Domingo</p>
+                    <h6 class="text-light">Cerrado</h6>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <!--<div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-4">Newsletter</h5>
                     <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
                     <div class="position-relative w-100">
@@ -364,7 +606,7 @@
                         <button type="button"
                             class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
