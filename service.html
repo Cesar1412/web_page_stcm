@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -8,285 +8,83 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <!-- Identidad visual: icono mostrado por el navegador -->
+    <link href="assets/images/brand/logo.png" rel="icon">
 
-    <!-- Google Web Fonts -->
+    <!-- Tipografías externas utilizadas por el sitio -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Rubik:wght@500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Icon Font Stylesheet -->
+    <!-- Iconos externos de Font Awesome y Bootstrap Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Estilos de animaciones y carruseles de terceros -->
+    <link href="assets/vendor/animate/animate.min.css" rel="stylesheet">
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Base visual de Bootstrap personalizada para STCM -->
+    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <!-- Estilos globales compartidos por todas las páginas -->
+    <link href="assets/css/main.css" rel="stylesheet">
 
-    <style>
-    /* ========== FUENTE PERSONALIZADA PARA STCM ========== */
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-    
-    .stcm-font {
-        font-family: 'Arial Paneuropean Rounded Bold', 'Arial Rounded MT Bold', 'Montserrat', sans-serif;
-        font-weight: 800;
-        letter-spacing: 1px;
-    }
-
-    /* ========== COLORES PRINCIPALES ========== */
-    :root {
-        --azul-stcm: #057fca;
-        --naranja-stcm: #ff8002;
-        --gris-stcm: #6c757d;
-    }
-
-    /* ========== COLOR AZUL (FONDOS) ========== */
-    .bg-primary {
-        background-color: var(--secondary) !important;
-    }
-
-    /* ========== FORZAR COLOR NARANJA EN MENÚ ========== */
-    /* Esto anula el efecto de navbar-dark */
-    .navbar-dark .navbar-nav .nav-link {
-        color: var(--primary) !important;
-    }
-
-    .navbar-dark .navbar-nav .nav-link:hover,
-    .navbar-dark .navbar-nav .nav-link.active {
-        color: var(--primary) !important;
-        opacity: 0.8;
-    }
-
-    /* ========== COLOR NARANJA (TEXTOS Y DESTACADOS) ========== */
-    .text-primary,
-    .facts .text-primary,
-    .project-title h5 {
-        color: var(--primary) !important;
-    }
-
-    /* Botones principales en naranja */
-    .btn-primary {
-        background-color: var(--primary) !important;
-        border-color: var(--primary) !important;
-    }
-
-    .btn-primary:hover {
-        background-color: #e67300 !important;
-        border-color: #e67300 !important;
-    }
-
-    /* Iconos y cuadros con fondo primario */
-    .btn-square.bg-primary,
-    .flex-shrink-0.bg-primary {
-        background-color: var(--primary) !important;
-    }
-
-    /* Botón de reproducción de video */
-    .btn-play:hover {
-        background-color: var(--primary) !important;
-    }
-
-    /* Redes sociales en equipo */
-    .team-social .btn-dark:hover {
-        background-color: var(--primary) !important;
-    }
-
-    /* Botón volver arriba */
-    .back-to-top:hover {
-        background-color: var(--primary) !important;
-    }
-
-    /* Enlaces en copyright */
-    .copyright a {
-        color: var(--primary) !important;
-    }
-    
-    .copyright a:hover {
-        color: var(--secondary) !important;
-    }
-
-    /* Bordes primarios */
-    .border-primary {
-        border-color: var(--primary) !important;
-    }
-
-    /* Testimonios */
-    .testimonial-item .btn-square.bg-primary {
-        background-color: var(--primary) !important;
-    }
-
-    /* Botón "Read More" en servicios */
-    .service-item .btn-light {
-        color: var(--secondary) !important;
-    }
-    
-    .service-item .btn-light:hover {
-        background-color: var(--primary) !important;
-        color: white !important;
-        border-color: var(--primary) !important;
-    }
-
-    /* Forzar texto STCM en gris */
-    .stcm-font {
-        color: var(--gris-stcm) !important;
-    }
-
-    /* Ajustes de contraste */
-    .text-dark {
-        color: #1e2a36 !important;
-    }
-
-    .bg-dark {
-        background-color: #1a1f24 !important;
-    }
-
-    /* ========== NOMBRE DE LA EMPRESA EN LA FRANJA CELESTE ========== */
-    .stcm-nav-name {
-        color: #ffffff;
-        font-size: 26px;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        margin-left: 40px   ;
-        white-space: nowrap;
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    }
-
-/*=========================================
-            CLIENTES
-=========================================*/
-
-.client-card{
-
-    height:170px;
-
-    background:#fff;
-
-    border:1px solid #e9e9e9;
-
-    border-radius:12px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:25px;
-
-    transition:.35s;
-
-    box-shadow:0 4px 15px rgba(0,0,0,.05);
-
-}
-
-.client-card img{
-
-    max-width:100%;
-
-    max-height:80px;
-
-    object-fit:contain;
-
-    transition:.35s;
-
-}
-
-.client-card:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 12px 30px rgba(0,0,0,.12);
-
-}
-
-
-</style>
+    <!-- Estilos exclusivos de esta página -->
+    <link href="assets/css/pages/services.css" rel="stylesheet">
 
 </head>
 
 <body>
-    <!-- Spinner Start -->
+    <!-- Cargador inicial: visible mientras termina de cargar la página -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
     </div>
-    <!-- Spinner End -->
+    <!-- Fin del cargador inicial -->
 
 
-    <!-- Topbar Start -->
-    <!--<div class="container-fluid bg-dark px-0">
-        <div class="row g-0 d-none d-lg-flex">
-            <div class="col-lg-6 ps-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center text-white">
-                    <span>Follow Us:</span>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-6 text-end">
-                <div class="h-100 topbar-right d-inline-flex align-items-center text-white py-2 px-5">
-                    <span class="fs-5 fw-bold me-2"><i class="fa fa-phone-alt me-2"></i>Call Us:</span>
-                    <span class="fs-5 fw-bold">+012 345 6789</span>
+    <!-- Navegación principal: marca, enlaces y llamada a cotización -->
+    <nav class="navbar navbar-expand-lg navbar-light site-header sticky-top">
+        <div class="site-header-inner">
+            <a href="index.html" class="navbar-brand site-brand" aria-label="STCM - Inicio">
+                <span class="site-brand-primary">
+                    <img src="assets/images/brand/logo.png" alt="" width="48" height="48">
+                    <span class="site-brand-name">STCM</span>
+                </span>
+                <span class="site-brand-tagline">Servicios Tecnológicos y Consultoría<br>Multisectorial Perú S.A.C</span>
+            </a>
+
+            <button type="button" class="navbar-toggler site-menu-toggle" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse site-navigation" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                <a href="index.html" class="nav-item nav-link">Inicio</a>
+                <a href="about.html" class="nav-item nav-link">Sobre nosotros</a>
+                <a href="service.html" class="nav-item nav-link active" aria-current="page">Servicios</a>
+                <a href="contact.html" class="nav-item nav-link">Solicitar cotización</a>
                 </div>
             </div>
         </div>
-    </div>-->
-    <!-- Topbar End -->
+    </nav>
+    <!-- Fin de la navegación principal -->
 
 
-    <!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg bg-primary sticky-top py-0 pe-5">
-    <a href="index.html" class="navbar-brand ps-5 me-0 d-flex align-items-center" 
-       style="background-color: white; 
-              padding: 10px 70px 10px 20px;
-              min-height: 80px;">
-        <img src="reallogo.png" alt="STCM Logo" style="height: 50px; width: auto; margin-right: 12px;">
-        <h1 class="m-0 stcm-font" style="font-family: 'Arial Paneuropean Rounded Bold', 'Arial Rounded MT Bold', 'Montserrat', sans-serif; font-weight: 800; letter-spacing: 1px;">STCM</h1>
-    </a>
-    <span class="stcm-nav-name d-none d-lg-block">SERVICIOS TECNOLÓGICOS Y CONSULTORÍA MULTISECTORIAL PERÚ S.A.C</span>
-    <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="index.html" class="nav-item nav-link">Inicio</a>
-            <a href="about.html" class="nav-item nav-link">Sobre nosotros</a>
-            <a href="service.html" class="nav-item nav-link active">Servicios</a>
-        </div>
-        <a href="contact.html" class="btn btn-primary px-3 d-none d-lg-block" style="font-weight: bold;">Solicitar cotización</a>
-    </div>
-</nav>
-<!-- Navbar End -->
-
-
-    <!-- Page Header Start -->
+    <!-- Encabezado interior: título y contexto de la página -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <h1 class="display-3 text-white animated slideInRight">Servicios</h1>
-            <!--<nav aria-label="breadcrumb">
-                <ol class="breadcrumb animated slideInRight mb-0">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Services</li>
-                </ol>
-            </nav>-->
-        </div>
+</div>
     </div>
-    <!-- Page Header End -->
+    <!-- Fin del encabezado interior -->
 
 
-    <!-- Service Start -->
+    <!-- Catálogo de servicios técnicos -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
@@ -296,9 +94,9 @@
             <div class="row gy-5 gx-4">
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item">
-                        <img class="img-fluid" src="calbal.jpeg" alt="">
+                        <img class="img-fluid" src="assets/images/services/balance-calibration.jpeg" alt="">
                         <div class="service-img">
-                            <img class="img-fluid" src="calbal.jpeg" alt="">
+                            <img class="img-fluid" src="assets/images/services/balance-calibration.jpeg" alt="">
                         </div>
                         <div class="service-detail">
                             <div class="service-title">
@@ -310,14 +108,14 @@
                                 <p class="text-white mb-0">Se evalúa la exactitud de la balanza mediante la aplicación de masas patrón en diferentes puntos de medición.</p>
                             </div>
                         </div>
-                        <!--<a class="btn btn-light" href="">Read More</a>-->
+
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item">
-                        <img class="img-fluid" src="calter.jpeg" alt="">
+                        <img class="img-fluid" src="assets/images/services/temperature-calibration.jpeg" alt="">
                         <div class="service-img">
-                            <img class="img-fluid" src="calter.jpeg" alt="">
+                            <img class="img-fluid" src="assets/images/services/temperature-calibration.jpeg" alt="">
                         </div>
                         <div class="service-detail">
                             <div class="service-title">
@@ -329,14 +127,14 @@
                                 <p class="text-white mb-0">Se evalúa la exactitud del manómetro mediante la aplicación de diferentes valores de presión, comparando sus indicaciones con un patrón de referencia trazable.</p>
                             </div>
                         </div>
-                        <!--<a class="btn btn-light" href="">Read More</a>-->
+
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item">
-                        <img class="img-fluid" src="calter.jpeg" alt="">
+                        <img class="img-fluid" src="assets/images/services/temperature-calibration.jpeg" alt="">
                         <div class="service-img">
-                            <img class="img-fluid" src="calter.jpeg" alt="">
+                            <img class="img-fluid" src="assets/images/services/temperature-calibration.jpeg" alt="">
                         </div>
                         <div class="service-detail">
                             <div class="service-title">
@@ -348,14 +146,14 @@
                                 <p class="text-white mb-0">Proceso mediante el cual se verifica el desempeño metrológico de un termómetro comparando sus mediciones con un patrón de referencia calibrado.</p>
                             </div>
                         </div>
-                        <!--<a class="btn btn-light" href="">Read More</a>-->
+
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item">
-                        <img class="img-fluid" src="provi.jpeg" alt="">
+                        <img class="img-fluid" src="assets/images/services/furnace-qualification.jpeg" alt="">
                         <div class="service-img">
-                            <img class="img-fluid" src="provi.jpeg" alt="">
+                            <img class="img-fluid" src="assets/images/services/furnace-qualification.jpeg" alt="">
                         </div>
                         <div class="service-detail">
                             <div class="service-title">
@@ -367,14 +165,14 @@
                                 <p class="text-white mb-0">Consiste en determinar los errores de indicación de temperatura y humedad de un termigrómetro mediante la comparación con patrones certificados.</p>
                             </div>
                         </div>
-                        <!--<a class="btn btn-light" href="">Read More</a>-->
+
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item">
-                        <img class="img-fluid" src="horno.jpeg" alt="">
+                        <img class="img-fluid" src="assets/images/services/furnace.jpeg" alt="">
                         <div class="service-img">
-                            <img class="img-fluid" src="horno.jpeg" alt="">
+                            <img class="img-fluid" src="assets/images/services/furnace.jpeg" alt="">
                         </div>
                         <div class="service-detail">
                             <div class="service-title">
@@ -386,14 +184,14 @@
                                 <p class="text-white mb-0">Se evalúa la exactitud del sistema de control de temperatura del horno mediante la comparación de su indicación con un patrón de temperatura trazable.</p>
                             </div>
                         </div>
-                        <!--<a class="btn btn-light" href="">Read More</a>-->
+
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item">
-                        <img class="img-fluid" src="incuba.jpeg" alt="">
+                        <img class="img-fluid" src="assets/images/services/incubator.jpeg" alt="">
                         <div class="service-img">
-                            <img class="img-fluid" src="incuba.jpeg" alt="">
+                            <img class="img-fluid" src="assets/images/services/incubator.jpeg" alt="">
                         </div>
                         <div class="service-detail">
                             <div class="service-title">
@@ -405,14 +203,14 @@
                                 <p class="text-white mb-0">Se realizan ensayos para verificar que la incubadora mantiene las condiciones de temperatura especificadas durante su operación.</p>
                             </div>
                         </div>
-                        <!--<a class="btn btn-light" href="">Read More</a>-->
+
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item">
-                        <img class="img-fluid" src="banomaria.jpeg" alt="">
+                        <img class="img-fluid" src="assets/images/services/water-bath.jpeg" alt="">
                         <div class="service-img">
-                            <img class="img-fluid" src="banomaria.jpeg" alt="">
+                            <img class="img-fluid" src="assets/images/services/water-bath.jpeg" alt="">
                         </div>
                         <div class="service-detail">
                             <div class="service-title">
@@ -424,14 +222,14 @@
                                 <p class="text-white mb-0">Evaluación del desempeño térmico de un baño María mediante pruebas que verifican el cumplimiento de las condiciones establecidas para su uso.</p>
                             </div>
                         </div>
-                        <!--<a class="btn btn-light" href="">Read More</a>-->
+
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item">
-                        <img class="img-fluid" src="provi.jpeg" alt="">
+                        <img class="img-fluid" src="assets/images/services/furnace-qualification.jpeg" alt="">
                         <div class="service-img">
-                            <img class="img-fluid" src="provi.jpeg" alt="">
+                            <img class="img-fluid" src="assets/images/services/furnace-qualification.jpeg" alt="">
                         </div>
                         <div class="service-detail">
                             <div class="service-title">
@@ -443,14 +241,14 @@
                                 <p class="text-white mb-0">Se realizan ensayos para verificar que la plancha de calentamiento mantiene las condiciones de temperatura especificadas durante su operación.</p>
                             </div>
                         </div>
-                        <!--<a class="btn btn-light" href="">Read More</a>-->
+
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item">
-                        <img class="img-fluid" src="alma.jpeg" alt="">
+                        <img class="img-fluid" src="assets/images/services/warehouse.jpeg" alt="">
                         <div class="service-img">
-                            <img class="img-fluid" src="alma.jpeg" alt="">
+                            <img class="img-fluid" src="assets/images/services/warehouse.jpeg" alt="">
                         </div>
                         <div class="service-detail">
                             <div class="service-title">
@@ -462,16 +260,16 @@
                                 <p class="text-white mb-0">Se registra la temperatura en diferentes ubicaciones del almacén durante un periodo determinado para identificar zonas frías, calientes y verificar su uniformidad.</p>
                             </div>
                         </div>
-                        <!--<a class="btn btn-light" href="">Read More</a>-->
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Service End -->
+    <!-- Fin del catálogo de servicios -->
 
 
-    <!-- Clientes Start -->
+    <!-- Clientes: organizaciones que confían en STCM -->
 <div class="container-xxl py-5">
     <div class="container">
 
@@ -490,56 +288,56 @@
             <!-- Cliente 1 -->
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="client-card">
-                    <img src="ser/delfarma.png" class="img-fluid" alt="Cliente 1">
+                    <img src="assets/images/clients/delfarma.png" class="img-fluid" alt="Cliente 1">
                 </div>
             </div>
 
             <!-- Cliente 2 -->
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="client-card">
-                    <img src="ser/eurofarma.png" class="img-fluid logo-grande" alt="Cliente 2">
+                    <img src="assets/images/clients/eurofarma.png" class="img-fluid logo-grande" alt="Cliente 2">
                 </div>
             </div>
 
             <!-- Cliente 3 -->
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="client-card">
-                    <img src="ser/factio.png" class="img-fluid logo-grande" alt="Cliente 3">
+                    <img src="assets/images/clients/factio.png" class="img-fluid logo-grande" alt="Cliente 3">
                 </div>
             </div>
 
             <!-- Cliente 4 -->
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="client-card">
-                    <img src="ser/genco.png" class="img-fluid" alt="Cliente 4">
+                    <img src="assets/images/clients/genco.png" class="img-fluid" alt="Cliente 4">
                 </div>
             </div>
 
             <!-- Cliente 5 -->
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="client-card">
-                    <img src="ser/lafarpe.png" class="img-fluid" alt="Cliente 5">
+                    <img src="assets/images/clients/lafarpe.png" class="img-fluid" alt="Cliente 5">
                 </div>
             </div>
 
             <!-- Cliente 6 -->
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="client-card">
-                    <img src="ser/lusa.jpg" class="img-fluid logo-grande" alt="Cliente 6">
+                    <img src="assets/images/clients/lusa.jpg" class="img-fluid logo-grande" alt="Cliente 6">
                 </div>
             </div>
 
             <!-- Cliente 7 -->
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="client-card">
-                    <img src="ser/alko.png" class="img-fluid" alt="Cliente 7">
+                    <img src="assets/images/clients/alko.png" class="img-fluid" alt="Cliente 7">
                 </div>
             </div>
 
             <!-- Cliente 8 -->
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="client-card">
-                    <img src="ser/tqp.png" class="img-fluid logo-grande" alt="Cliente 8">
+                    <img src="assets/images/clients/tqp.png" class="img-fluid logo-grande" alt="Cliente 8">
                 </div>
             </div>
 
@@ -547,39 +345,20 @@
 
     </div>
 </div>
-<!-- Clientes End -->
+<!-- Fin de clientes -->
 
 
-
-    <!-- Footer Start -->
+    <!-- Pie de página: contacto, navegación y horarios -->
     <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-6 col-md-6">
                     <h5 class="text-white mb-4">Nuestra Oficina</h5>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jr. San Juan Bautista Nro. 268, Lima</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 6789</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>sctmcalibraciones@gmail.com</p>
-                    <div class="d-flex pt-3">
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
-                                class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="text-white mb-4">Links</h5>
-                    <a class="btn btn-link" href="">Sobre nosotros</a>
-                    <a class="btn btn-link" href="">Servicios</a>
-                    <a class="btn btn-link" href="contact.html">Solicitar cotización</a>
-                    <!--<a class="btn btn-link" href="">Terms & Condition</a>-->
-                    <!--<a class="btn btn-link" href="">Support</a>-->
-                </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-6 col-md-6">
                     <h5 class="text-white mb-4">Horarios de atención</h5>
                     <p class="mb-1">Lunes - Viernes</p>
                     <h6 class="text-light">08:00 am - 06:00 pm</h6>
@@ -588,51 +367,36 @@
                     <p class="mb-1">Domingo</p>
                     <h6 class="text-light">Cerrado</h6>
                 </div>
-                <!--<div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Newsletter</h5>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative w-100">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
-                            placeholder="Your email">
-                        <button type="button"
-                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div>-->
-            </div>
+</div>
         </div>
     </div>
-    <!-- Footer End -->
+    <!-- Fin del pie de página -->
 
 
-    <!-- Copyright Start -->
+    <!-- Créditos legales y de la plantilla -->
     <div class="container-fluid copyright bg-dark py-4">
         <div class="container text-center">
-            <p class="mb-2">Copyright &copy; <a class="fw-semi-bold" href="#">Your Site Name</a>, All Right Reserved.
+            <p class="mb-2">Copyright &copy; <a class="fw-semi-bold" href="index.html">STCM</a>, All Right Reserved.
             </p>
-            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-            <p class="mb-0">Designed By <a class="fw-semi-bold" href="https://htmlcodex.com">HTML Codex</a> Distributed
+<p class="mb-0">Designed By <a class="fw-semi-bold" href="https://htmlcodex.com">HTML Codex</a> Distributed
                 By: <a href="https://themewagon.com">ThemeWagon</a> </p>
         </div>
     </div>
-    <!-- Copyright End -->
+    <!-- Fin de créditos -->
 
 
-    <!-- Back to Top -->
+    <!-- Acción flotante para regresar al inicio -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
+    <!-- Dependencias JavaScript de terceros -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="assets/vendor/wow/wow.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <!-- Comportamiento compartido del sitio -->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

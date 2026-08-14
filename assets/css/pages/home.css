@@ -1,0 +1,38 @@
+/* Estilos exclusivos de la portada. */
+/* ========== IMÁGENES "SOBRE NOSOTROS" (prole1 / prole2) ========== */
+    .about-img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 991.98px) {
+        .about-img {
+            height: 260px;
+        }
+    }
+
+/* ========== OVERLAY PARA LEGIBILIDAD DEL CAROUSEL ========== */
+    #header-carousel .carousel-item {
+        position: relative;
+    }
+
+    #header-carousel .carousel-item::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25));
+        z-index: 1;
+    }
+
+    #header-carousel .carousel-caption {
+        z-index: 2;
+    }
+
+    /* Mantener las flechas del carousel por encima del overlay */
+    #header-carousel .carousel-control-prev,
+    #header-carousel .carousel-control-next {
+        z-index: 3;
+    }

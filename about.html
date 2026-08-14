@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -8,307 +8,93 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <!-- Identidad visual: icono mostrado por el navegador -->
+    <link href="assets/images/brand/logo.png" rel="icon">
 
-    <!-- Google Web Fonts -->
+    <!-- Tipografías externas utilizadas por el sitio -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Rubik:wght@500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Icon Font Stylesheet -->
+    <!-- Iconos externos de Font Awesome y Bootstrap Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Estilos de animaciones y carruseles de terceros -->
+    <link href="assets/vendor/animate/animate.min.css" rel="stylesheet">
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Base visual de Bootstrap personalizada para STCM -->
+    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <!-- Estilos globales compartidos por todas las páginas -->
+    <link href="assets/css/main.css" rel="stylesheet">
 
-    <style>
-    /* ========== FUENTE PERSONALIZADA PARA STCM ========== */
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-    
-    .stcm-font {
-        font-family: 'Arial Paneuropean Rounded Bold', 'Arial Rounded MT Bold', 'Montserrat', sans-serif;
-        font-weight: 800;
-        letter-spacing: 1px;
-    }
-
-    /* ========== COLORES PRINCIPALES ========== */
-    :root {
-        --azul-stcm: #057fca;
-        --naranja-stcm: #ff8002;
-        --gris-stcm: #6c757d;
-    }
-
-    /* ========== COLOR AZUL (FONDOS) ========== */
-    .bg-primary {
-        background-color: var(--secondary) !important;
-    }
-
-    /* ========== FORZAR COLOR NARANJA EN MENÚ ========== */
-    /* Esto anula el efecto de navbar-dark */
-    .navbar-dark .navbar-nav .nav-link {
-        color: var(--primary) !important;
-    }
-
-    .navbar-dark .navbar-nav .nav-link:hover,
-    .navbar-dark .navbar-nav .nav-link.active {
-        color: var(--primary) !important;
-        opacity: 0.8;
-    }
-
-    /* ========== COLOR NARANJA (TEXTOS Y DESTACADOS) ========== */
-    .text-primary,
-    .facts .text-primary,
-    .project-title h5 {
-        color: var(--primary) !important;
-    }
-
-    /* Botones principales en naranja */
-    .btn-primary {
-        background-color: var(--primary) !important;
-        border-color: var(--primary) !important;
-    }
-
-    .btn-primary:hover {
-        background-color: #e67300 !important;
-        border-color: #e67300 !important;
-    }
-
-    /* Iconos y cuadros con fondo primario */
-    .btn-square.bg-primary,
-    .flex-shrink-0.bg-primary {
-        background-color: var(--primary) !important;
-    }
-
-    /* Botón de reproducción de video */
-    .btn-play:hover {
-        background-color: var(--primary) !important;
-    }
-
-    /* Redes sociales en equipo */
-    .team-social .btn-dark:hover {
-        background-color: var(--primary) !important;
-    }
-
-    /* Botón volver arriba */
-    .back-to-top:hover {
-        background-color: var(--primary) !important;
-    }
-
-    /* Enlaces en copyright */
-    .copyright a {
-        color: var(--primary) !important;
-    }
-    
-    .copyright a:hover {
-        color: var(--secondary) !important;
-    }
-
-    /* Bordes primarios */
-    .border-primary {
-        border-color: var(--primary) !important;
-    }
-
-    /* Testimonios */
-    .testimonial-item .btn-square.bg-primary {
-        background-color: var(--primary) !important;
-    }
-
-    /* Botón "Read More" en servicios */
-    .service-item .btn-light {
-        color: var(--secondary) !important;
-    }
-    
-    .service-item .btn-light:hover {
-        background-color: var(--primary) !important;
-        color: white !important;
-        border-color: var(--primary) !important;
-    }
-
-    /* Forzar texto STCM en gris */
-    .stcm-font {
-        color: var(--gris-stcm) !important;
-    }
-
-    /* Ajustes de contraste */
-    .text-dark {
-        color: #1e2a36 !important;
-    }
-
-    .bg-dark {
-        background-color: #1a1f24 !important;
-    }
-
-    /* ========== NOMBRE DE LA EMPRESA EN LA FRANJA CELESTE ========== */
-    .stcm-nav-name {
-        color: #ffffff;
-        font-size: 26px;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        margin-left: 40px;
-        white-space: nowrap;
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Soluciones - efecto hover */
-    .benefit-item {
-        transition: transform .18s ease, background-color .18s ease, box-shadow .18s ease;
-        border-radius: .5rem;
-    }
-    .benefit-item:hover {
-        background-color: rgba(255, 128, 2, 0.08);
-        transform: translateY(-6px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-    }
-    /* Badges bajo el contador - tamaño y color naranja para destacar */
-    .stat-badges .badge {
-        background-color: var(--primary) !important;
-        color: #fff !important;
-        padding: .8rem 1.2rem;
-        font-size: 1.6rem;
-        font-weight: 800;
-        border-radius: 1rem;
-        display: inline-flex;
-        align-items: center;
-        gap: .5rem;
-        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    }
-    .team-item-small {
-        background-color: #fff;
-        border: 1px solid rgba(0,0,0,0.08);
-        border-radius: 1rem;
-        padding: 1rem;
-        transition: transform .18s ease, box-shadow .18s ease;
-    }
-    .team-item-small:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 14px 24px rgba(0,0,0,0.08);
-    }
-    .team-item-small img {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-    }
-    .team-item-small h6 {
-        margin-bottom: .25rem;
-    }
-    .team-item-small small {
-        display: block;
-        margin-bottom: .5rem;
-    }
-
-    /* ========== IMÁGENES "SOBRE NOSOTROS" (prole3 / prole4) ========== */
-    .about-img {
-        width: 100%;
-        height: 370px;
-        object-fit: cover;
-        border-radius: 12px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    }
-
-    @media (max-width: 991.98px) {
-        .about-img {
-            height: 260px;
-        }
-    }
-</style>
+    <!-- Estilos exclusivos de esta página -->
+    <link href="assets/css/pages/about.css" rel="stylesheet">
 
 </head>
 
 <body>
-    <!-- Spinner Start -->
+    <!-- Cargador inicial: visible mientras termina de cargar la página -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
     </div>
-    <!-- Spinner End -->
+    <!-- Fin del cargador inicial -->
 
 
-    <!-- Topbar Start -->
-    <!--<div class="container-fluid bg-dark px-0">
-        <div class="row g-0 d-none d-lg-flex">
-            <div class="col-lg-6 ps-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center text-white">
-                    <span>Follow Us:</span>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-6 text-end">
-                <div class="h-100 topbar-right d-inline-flex align-items-center text-white py-2 px-5">
-                    <span class="fs-5 fw-bold me-2"><i class="fa fa-phone-alt me-2"></i>Call Us:</span>
-                    <span class="fs-5 fw-bold">+012 345 6789</span>
+    <!-- Navegación principal: marca, enlaces y llamada a cotización -->
+    <nav class="navbar navbar-expand-lg navbar-light site-header sticky-top">
+        <div class="site-header-inner">
+            <a href="index.html" class="navbar-brand site-brand" aria-label="STCM - Inicio">
+                <span class="site-brand-primary">
+                    <img src="assets/images/brand/logo.png" alt="" width="48" height="48">
+                    <span class="site-brand-name">STCM</span>
+                </span>
+                <span class="site-brand-tagline">Servicios Tecnológicos y Consultoría<br>Multisectorial Perú S.A.C</span>
+            </a>
+
+            <button type="button" class="navbar-toggler site-menu-toggle" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse site-navigation" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                <a href="index.html" class="nav-item nav-link">Inicio</a>
+                <a href="about.html" class="nav-item nav-link active" aria-current="page">Sobre nosotros</a>
+                <a href="service.html" class="nav-item nav-link">Servicios</a>
+                <a href="contact.html" class="nav-item nav-link">Solicitar cotización</a>
                 </div>
             </div>
         </div>
-    </div>-->
-    <!-- Topbar End -->
+    </nav>
+    <!-- Fin de la navegación principal -->
 
 
-    <!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg bg-primary sticky-top py-0 pe-5">
-    <a href="index.html" class="navbar-brand ps-5 me-0 d-flex align-items-center" 
-       style="background-color: white; 
-              padding: 10px 70px 10px 20px;
-              min-height: 80px;">
-        <img src="reallogo.png" alt="STCM Logo" style="height: 50px; width: auto; margin-right: 12px;">
-        <h1 class="m-0 stcm-font" style="font-family: 'Arial Paneuropean Rounded Bold', 'Arial Rounded MT Bold', 'Montserrat', sans-serif; font-weight: 800; letter-spacing: 1px;">STCM</h1>
-    </a>
-    <span class="stcm-nav-name d-none d-lg-block">SERVICIOS TECNOLÓGICOS Y CONSULTORÍA MULTISECTORIAL PERÚ S.A.C</span>
-    <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="index.html" class="nav-item nav-link">Inicio</a>
-            <a href="about.html" class="nav-item nav-link active">Sobre nosotros</a>
-            <a href="service.html" class="nav-item nav-link">Servicios</a>
-        </div>
-        <a href="contact.html" class="btn btn-primary px-3 d-none d-lg-block" style="font-weight: bold;">Solicitar cotización</a>
-    </div>
-</nav>
-<!-- Navbar End -->
-
-
-    <!-- Page Header Start -->
+    <!-- Encabezado interior: título y contexto de la página -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <h1 class="display-3 text-white animated slideInRight">Sobre Nosotros</h1>
-            <!--<nav aria-label="breadcrumb">
-                    <ol class="breadcrumb animated slideInRight mb-0">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">About Us</li>
-                </ol>
-            </nav>-->
-        </div>
+</div>
     </div>
-    <!-- Page Header End -->
+    <!-- Fin del encabezado interior -->
 
 
-    <!-- About Start -->
+    <!-- Presentación de la empresa y propuesta de valor -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6">
                     <div class="row gx-3 h-100">
                         <div class="col-6 align-self-start wow fadeInUp" data-wow-delay="0.1s">
-                            <img class="img-fluid about-img" src="prole3.png">
+                            <img class="img-fluid about-img" src="assets/images/about/company-1.png">
                         </div>
                         <div class="col-6 align-self-end wow fadeInDown" data-wow-delay="0.1s">
-                            <img class="img-fluid about-img" src="prole4.png">
+                            <img class="img-fluid about-img" src="assets/images/about/company-2.png">
                         </div>
                     </div>
                 </div>
@@ -318,10 +104,10 @@
                     <p class="mb-4"> Somos una empresa especializada en servicios de metrología, comprometida con garantizar la precisión y confiabilidad de los equipos de medición utilizados en los sectores industrial, comercial y de laboratorio.
                     </p>
                     <div class="d-flex align-items-center mb-4">
-                        <div class="flex-shrink-0 bg-primary p-4 text-center">
+                        <div class="flex-shrink-0 experience-badge p-4 text-center">
                             <h1 class="display-2 mb-0">6</h1>
-                            <h5 class="text-white">Años de</h5>
-                            <h5 class="text-white">Experiencia</h5>
+                            <h5>Años de</h5>
+                            <h5>Experiencia</h5>
                         </div>
                         <div class="ms-4">
                             <p><i class="fa fa-check text-primary me-2"></i>Calibración de temperatura y humedad</p>
@@ -365,7 +151,7 @@
             </div>
         </div>
     </div>
-    <!-- About End -->
+    <!-- Fin de la presentación de la empresa -->
 
 
     <!-- Soluciones y Beneficios Start -->
@@ -402,43 +188,8 @@
     </div>
     <!-- Soluciones y Beneficios End -->
 
-    <!-- Facts Start -->
-    <!--<div class="container-fluid facts my-5 p-5">
-        <div class="row g-5">
-            <div class="col-md-6 col-xl-3 wow fadeIn" data-wow-delay="0.1s">
-                <div class="text-center border p-5">
-                    <i class="fa fa-certificate fa-3x text-white mb-3"></i>
-                    <h1 class="display-2 text-primary mb-0" data-toggle="counter-up">25</h1>
-                    <span class="fs-5 fw-semi-bold text-white">Years Experience</span>
-                </div>
-            </div>
-            <div class="col-md-6 col-xl-3 wow fadeIn" data-wow-delay="0.3s">
-                <div class="text-center border p-5">
-                    <i class="fa fa-users-cog fa-3x text-white mb-3"></i>
-                    <h1 class="display-2 text-primary mb-0" data-toggle="counter-up">135</h1>
-                    <span class="fs-5 fw-semi-bold text-white">Team Members</span>
-                </div>
-            </div>
-            <div class="col-md-6 col-xl-3 wow fadeIn" data-wow-delay="0.5s">
-                <div class="text-center border p-5">
-                    <i class="fa fa-users fa-3x text-white mb-3"></i>
-                    <h1 class="display-2 text-primary mb-0" data-toggle="counter-up">957</h1>
-                    <span class="fs-5 fw-semi-bold text-white">Happy Clients</span>
-                </div>
-            </div>
-            <div class="col-md-6 col-xl-3 wow fadeIn" data-wow-delay="0.7s">
-                <div class="text-center border p-5">
-                    <i class="fa fa-check-double fa-3x text-white mb-3"></i>
-                    <h1 class="display-2 text-primary mb-0" data-toggle="counter-up">1839</h1>
-                    <span class="fs-5 fw-semi-bold text-white">Projects Done</span>
-                </div>
-            </div>
-        </div>
-    </div>-->
-    <!-- Facts End -->
 
-
-    <!-- Team Start -->
+    <!-- Equipo profesional de STCM -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
@@ -449,7 +200,7 @@
 <div class="row justify-content-center mb-5">
     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
         <div class="team-item">
-            <img class="team-photo-main" src="nofotohombre.jpg" alt="">
+            <img class="team-photo-main" src="assets/images/team/placeholder-man.jpg" alt="">
 
             <div class="d-flex">
                 <div class="flex-shrink-0 btn-square bg-primary"
@@ -475,7 +226,7 @@
 
     <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
         <div class="team-item team-item-small text-center">
-            <img class="rounded-circle mb-3" src="romina.jpeg" alt="Romina">
+            <img class="rounded-circle mb-3" src="assets/images/team/romina.jpeg" alt="Romina">
             <h6 class="mb-0">Romina </h6>
             <small class="text-primary">Área de Logistica</small>
         </div>
@@ -483,7 +234,7 @@
 
     <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.15s">
         <div class="team-item team-item-small text-center">
-            <img class="rounded-circle mb-3" src="nofotomujer.jpg" alt="Teresa">
+            <img class="rounded-circle mb-3" src="assets/images/team/placeholder-woman.jpg" alt="Teresa">
             <h6 class="mb-0">Teresa</h6>
             <small class="text-primary">Área de Logistica</small>
         </div>
@@ -496,7 +247,7 @@
 
     <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
         <div class="team-item team-item-small text-center">
-            <img class="rounded-circle mb-3" src="nofotohombre.jpg" alt="River">
+            <img class="rounded-circle mb-3" src="assets/images/team/placeholder-man.jpg" alt="River">
             <h6 class="mb-0">River</h6>
             <small class="text-primary">Área de Calibración</small>
         </div>
@@ -504,7 +255,7 @@
 
     <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.25s">
         <div class="team-item team-item-small text-center">
-            <img class="rounded-circle mb-3" src="cesar.jpeg" alt="Cesar">
+            <img class="rounded-circle mb-3" src="assets/images/team/cesar.jpeg" alt="Cesar">
             <h6 class="mb-0">César</h6>
             <small class="text-primary">Área de Calibración</small>
         </div>
@@ -512,7 +263,7 @@
 
     <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
         <div class="team-item team-item-small text-center">
-            <img class="rounded-circle mb-3" src="nofotohombre.jpg" alt="Hipolito">
+            <img class="rounded-circle mb-3" src="assets/images/team/placeholder-man.jpg" alt="Hipolito">
             <h6 class="mb-0">Hipolito</h6>
             <small class="text-primary">Área de Calibración</small>
         </div>
@@ -525,7 +276,7 @@
 
     <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.35s">
         <div class="team-item team-item-small text-center">
-            <img class="rounded-circle mb-3" src="enrique.jpeg" alt="Enrique">
+            <img class="rounded-circle mb-3" src="assets/images/team/enrique.jpeg" alt="Enrique">
             <h6 class="mb-0">Enrique</h6>
             <small class="text-primary">Área de Calificación</small>
         </div>
@@ -533,7 +284,7 @@
 
     <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
         <div class="team-item team-item-small text-center">
-            <img class="rounded-circle mb-3" src="nofotohombre.jpg" alt="Sebastian">
+            <img class="rounded-circle mb-3" src="assets/images/team/placeholder-man.jpg" alt="Sebastian">
             <h6 class="mb-0">Sebastian</h6>
             <small class="text-primary">Área de Calificación</small>
         </div>
@@ -542,60 +293,19 @@
 </div>
         </div>
     </div>
-    <!-- Team End -->
+    <!-- Fin del equipo profesional -->
 
-
-    <!-- Video Modal Start -->
-    <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- 16:9 aspect ratio -->
-                    <div class="ratio ratio-16x9">
-                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen
-                            allowscriptaccess="always" allow="autoplay"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Video Modal End -->
-
-
-    <!-- Footer Start -->
+<!-- Pie de página: contacto, navegación y horarios -->
     <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-6 col-md-6">
                     <h5 class="text-white mb-4">Nuestra Oficina</h5>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jr. San Juan Bautista Nro. 268, Lima</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 6789</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>sctmcalibraciones@gmail.com</p>
-                    <div class="d-flex pt-3">
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
-                                class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="text-white mb-4">Links</h5>
-                    <a class="btn btn-link" href="">Sobre nosotros</a>
-                    <a class="btn btn-link" href="">Servicios</a>
-                    <a class="btn btn-link" href="contact.html">Solicitar cotización</a>
-                    <!--<a class="btn btn-link" href="">Terms & Condition</a>-->
-                    <!--<a class="btn btn-link" href="">Support</a>-->
-                </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-6 col-md-6">
                     <h5 class="text-white mb-4">Horarios de atención</h5>
                     <p class="mb-1">Lunes - Viernes</p>
                     <h6 class="text-light">08:00 am - 06:00 pm</h6>
@@ -604,51 +314,36 @@
                     <p class="mb-1">Domingo</p>
                     <h6 class="text-light">Cerrado</h6>
                 </div>
-                <!--<div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Newsletter</h5>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative w-100">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
-                            placeholder="Your email">
-                        <button type="button"
-                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div>-->
-            </div>
+</div>
         </div>
     </div>
-    <!-- Footer End -->
+    <!-- Fin del pie de página -->
 
 
-    <!-- Copyright Start -->
+    <!-- Créditos legales y de la plantilla -->
     <div class="container-fluid copyright bg-dark py-4">
         <div class="container text-center">
-            <p class="mb-2">Copyright &copy; <a class="fw-semi-bold" href="#">Your Site Name</a>, All Right Reserved.
+            <p class="mb-2">Copyright &copy; <a class="fw-semi-bold" href="index.html">STCM</a>, All Right Reserved.
             </p>
-            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-            <p class="mb-0">Designed By <a class="fw-semi-bold" href="https://htmlcodex.com">HTML Codex</a> Distributed
+<p class="mb-0">Designed By <a class="fw-semi-bold" href="https://htmlcodex.com">HTML Codex</a> Distributed
                 By: <a href="https://themewagon.com">ThemeWagon</a> </p>
         </div>
     </div>
-    <!-- Copyright End -->
+    <!-- Fin de créditos -->
 
 
-    <!-- Back to Top -->
+    <!-- Acción flotante para regresar al inicio -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
+    <!-- Dependencias JavaScript de terceros -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="assets/vendor/wow/wow.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <!-- Comportamiento compartido del sitio -->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
